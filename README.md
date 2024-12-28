@@ -81,6 +81,20 @@ The backend will run on `http://localhost:5000` by default.
 - `PUT /api/students/:studentId`: Update student details
 - `DELETE /api/students/:studentId`: Remove a student
 
+## Usage Flow
+1. **Superadmin Registration:**
+   - First, register a superadmin using the `/api/users/register` endpoint via the backend.
+   - Login using the registered superadmin credentials.
+
+2. **Create a School Admin and School:**
+   - As a superadmin, use the `/api/users` endpoint to create a school admin.
+   - Assign the created school admin to a specific school by creating a school with the `/api/schools` endpoint.
+
+3. **School Admin Management:**
+   - The school admin can login and manage their assigned school's resources, such as classrooms and students, through the frontend or respective API endpoints.
+
+4. **Classroom and Student Management:**
+   - The school admin can create, update, and delete classrooms and students using their dashboard.
 
 
 ## Scripts
